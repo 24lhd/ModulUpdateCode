@@ -22,8 +22,9 @@ public class UpdateApp {
      * @param appName Tên file .apk được tải về
      * @param urlApp link url chứa file apk
      * @param content nội dung của trạng thái update
+     * @param app_name       app_name teen của ung dụng
      */
-    public void getAndInstallAppLication(final Activity activity, String appName, String urlApp, String content) {
+    public void getAndInstallAppLication(final Activity activity, String appName, String urlApp, String content,String app_name) {
         String destination = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/";
         final String fileName = appName;
         destination += fileName;
