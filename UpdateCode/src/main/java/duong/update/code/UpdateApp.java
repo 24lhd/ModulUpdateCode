@@ -22,9 +22,9 @@ public class UpdateApp {
      * @param appName Tên file .apk được tải về
      * @param urlApp link url chứa file apk
      * @param content nội dung của trạng thái update
-     * @param app_name       app_name teen của ung dụng
+     * @param title       title cua thong báo
      */
-    public void getAndInstallAppLication(final Activity activity, String appName, String urlApp, String content,String app_name) {
+    public void getAndInstallAppLication(final Activity activity, String appName, String urlApp, String content,String title) {
         String destination = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS) + "/";
         final String fileName = appName;
         destination += fileName;
@@ -39,7 +39,7 @@ public class UpdateApp {
         //set downloadmanager
         DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
         request.setDescription(content);
-        request.setTitle(activity.getString(R.string.app_name));
+        request.setTitle(title);
         //set destination
         request.setDestinationUri(uri);
         // get download service and enqueue file
